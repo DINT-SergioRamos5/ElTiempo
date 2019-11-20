@@ -24,7 +24,7 @@
                                 <Run Text="/"/>
                                 <Run Text="{Binding MinimaFarenheit, Converter={StaticResource ConvertidorTiempo}}"/>
                             </TextBlock>
-                        </StackPanel>
+                        </StackPanel> 
                     </DataTemplate>                    
                 </ListBox.ItemTemplate>
             </ListBox>
