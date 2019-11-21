@@ -19,6 +19,7 @@ public class PrediccionDia : INotifyPropertyChanged
         set
         {
             _dia = value;
+            NotifyPropertyChanged("Dia");
         }
     }
 
@@ -32,6 +33,7 @@ public class PrediccionDia : INotifyPropertyChanged
         set
         {
             _prediccion = value;
+            NotifyPropertyChanged("Prediccion");
         }
     }
 
@@ -45,6 +47,7 @@ public class PrediccionDia : INotifyPropertyChanged
         set
         {
             _minimaFarenheit = value;
+            NotifyPropertyChanged("MinimaFarenheit");
         }
     }
 
@@ -61,6 +64,7 @@ public class PrediccionDia : INotifyPropertyChanged
         set
         {
             _maximaFarenheit = value;
+            NotifyPropertyChanged("MaximaFarenheit");
         }
     }
 

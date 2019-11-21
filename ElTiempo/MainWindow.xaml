@@ -13,13 +13,13 @@
     <Grid>
 
         <DockPanel LastChildFill="True">
-            <ListBox DockPanel.Dock="Left" x:Name="ListaBox" ItemsSource="{Binding}" Template="{DynamicResource ListBoxControlTemplate1}"  >
-                <ListBox.ItemTemplate>
+            <ListBox Margin="10" Padding="10" HorizontalAlignment="Center" DockPanel.Dock="Left" x:Name="ListaBox" ItemsSource="{Binding}" Template="{DynamicResource ListBoxControlTemplate1}"  >
+                <ListBox.ItemTemplate >
                     <DataTemplate>
-                        <StackPanel Width="100" Background="Gray" Orientation="Vertical" HorizontalAlignment="Center" >
-                            <TextBlock Text="{Binding Dia}"></TextBlock>
+                        <StackPanel Width="100" Margin="5" Background="Gray" Orientation="Vertical" HorizontalAlignment="Center" >
+                            <TextBlock HorizontalAlignment="Center" Text="{Binding Dia}"></TextBlock>
                             <Image Source="{Binding Prediccion, Converter={StaticResource  ConvertidoPredicion}}"></Image>
-                            <TextBlock>
+                            <TextBlock HorizontalAlignment="Center">
                                 <Run Text="{Binding MaximaFarenheit, Converter={StaticResource ConvertidorTiempo}}"/>
                                 <Run Text="/"/>
                                 <Run Text="{Binding MinimaFarenheit, Converter={StaticResource ConvertidorTiempo}}"/>
@@ -45,22 +45,22 @@
                 
                 <TextBlock Grid.Row="0" Grid.Column="0">Día</TextBlock>
                 <DockPanel LastChildFill="True" Grid.Row="0" Grid.Column="1">                    
-                    <TextBox x:Name="DiaTextBox" Text="{Binding Dia}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
+                    <TextBox x:Name="DiaTextBox" Text="{Binding Dia, Mode=TwoWay}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
                 </DockPanel>
 
                 <TextBlock Grid.Row="1" Grid.Column="0">Prediccion</TextBlock>
                 <DockPanel Grid.Row="1" Grid.Column="1" LastChildFill="True">                    
-                    <TextBox x:Name="PrediccionTextBox" Text="{Binding Prediccion}"  Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
+                    <TextBox x:Name="PrediccionTextBox" Text="{Binding Prediccion, Mode=TwoWay}"  Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
                 </DockPanel>
 
                 <TextBlock Grid.Row="2" Grid.Column="0">Minima(F)</TextBlock>
                 <DockPanel Grid.Row="2" Grid.Column="1" LastChildFill="True">                
-                    <TextBox x:Name="MinimaTextBox" Text="{Binding MinimaFarenheit}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
+                    <TextBox x:Name="MinimaTextBox" Text="{Binding MinimaFarenheit, Mode=TwoWay}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
                 </DockPanel>
 
                 <TextBlock Grid.Row="3" Grid.Column="0">Maxima(F)</TextBlock>
                 <DockPanel Grid.Row="3" Grid.Column="1" LastChildFill="True">                
-                    <TextBox x:Name="MaximaTextBox" Text="{Binding MaximaFarenheit}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
+                    <TextBox x:Name="MaximaTextBox" Text="{Binding MaximaFarenheit, Mode=TwoWay}" Template="{DynamicResource TextBoxControlTemplate1}"></TextBox>
                 </DockPanel>
                     
             </Grid>
